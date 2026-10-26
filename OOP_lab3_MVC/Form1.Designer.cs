@@ -71,6 +71,8 @@
             this.textBoxB.Name = "textBoxB";
             this.textBoxB.Size = new System.Drawing.Size(148, 22);
             this.textBoxB.TabIndex = 3;
+            this.textBoxB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxB_KeyDown);
+            this.textBoxB.Leave += new System.EventHandler(this.textBoxB_Leave);
             // 
             // textBoxC
             // 
@@ -78,6 +80,8 @@
             this.textBoxC.Name = "textBoxC";
             this.textBoxC.Size = new System.Drawing.Size(148, 22);
             this.textBoxC.TabIndex = 4;
+            this.textBoxC.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxC_KeyDown);
+            this.textBoxC.Leave += new System.EventHandler(this.textBoxC_Leave);
             // 
             // numericUpDownA
             // 
@@ -93,6 +97,7 @@
             this.numericUpDownB.Name = "numericUpDownB";
             this.numericUpDownB.Size = new System.Drawing.Size(148, 22);
             this.numericUpDownB.TabIndex = 6;
+            this.numericUpDownB.ValueChanged += new System.EventHandler(this.numericUpDownB_ValueChanged);
             // 
             // numericUpDownC
             // 
@@ -100,10 +105,12 @@
             this.numericUpDownC.Name = "numericUpDownC";
             this.numericUpDownC.Size = new System.Drawing.Size(148, 22);
             this.numericUpDownC.TabIndex = 7;
+            this.numericUpDownC.ValueChanged += new System.EventHandler(this.numericUpDownC_ValueChanged);
             // 
             // trackBarA
             // 
             this.trackBarA.Location = new System.Drawing.Point(272, 330);
+            this.trackBarA.Maximum = 100;
             this.trackBarA.Name = "trackBarA";
             this.trackBarA.Size = new System.Drawing.Size(148, 56);
             this.trackBarA.TabIndex = 8;
@@ -112,16 +119,20 @@
             // trackBarB
             // 
             this.trackBarB.Location = new System.Drawing.Point(460, 330);
+            this.trackBarB.Maximum = 100;
             this.trackBarB.Name = "trackBarB";
             this.trackBarB.Size = new System.Drawing.Size(148, 56);
             this.trackBarB.TabIndex = 9;
+            this.trackBarB.Scroll += new System.EventHandler(this.trackBarB_Scroll);
             // 
             // trackBarC
             // 
             this.trackBarC.Location = new System.Drawing.Point(651, 330);
+            this.trackBarC.Maximum = 100;
             this.trackBarC.Name = "trackBarC";
             this.trackBarC.Size = new System.Drawing.Size(148, 56);
             this.trackBarC.TabIndex = 10;
+            this.trackBarC.Scroll += new System.EventHandler(this.trackBarC_Scroll);
             // 
             // Form1
             // 

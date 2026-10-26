@@ -20,8 +20,25 @@ namespace OOP_lab3_MVC
             InitializeComponent();
 
             _model = new Model();
+            _model.observers += new System.EventHandler(this.UpdateFromModel);
+            UpdateFromModel(this, null);
+        }
+        private void UpdateFromModel(object sender, EventArgs e)
+        {
+            textBoxA.Text = _model.getA().ToString();
+            numericUpDownA.Value = _model.getA();
+            trackBarA.Value = _model.getA();
+
+            textBoxB.Text = _model.getB().ToString();
+            numericUpDownB.Value = _model.getB();
+            trackBarB.Value = _model.getB();
+
+            textBoxC.Text = _model.getC().ToString();
+            numericUpDownC.Value = _model.getC();
+            trackBarC.Value = _model.getC();
         }
 
+        //======================================================================
         private void trackBarA_Scroll(object sender, EventArgs e)
         {
             _model.SetA(trackBarA.Value);
@@ -43,6 +60,52 @@ namespace OOP_lab3_MVC
         private void textBoxA_Leave(object sender, EventArgs e)
         {
             _model.SetA(Int32.Parse(textBoxA.Text));
+        }
+        //===================================================================
+        private void trackBarB_Scroll(object sender, EventArgs e)
+        {
+            _model.SetB(trackBarB.Value);
+        }
+
+        private void numericUpDownB_ValueChanged(object sender, EventArgs e)
+        {
+            _model.SetB(Decimal.ToInt32(numericUpDownB.Value));
+        }
+
+        private void textBoxB_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                _model.SetB(Int32.Parse(textBoxB.Text));
+            }
+        }
+
+        private void textBoxB_Leave(object sender, EventArgs e)
+        {
+            _model.SetB(Int32.Parse(textBoxB.Text));
+        }
+        //=============================================================
+        private void trackBarC_Scroll(object sender, EventArgs e)
+        {
+            _model.SetC(trackBarC.Value);
+        }
+
+        private void numericUpDownC_ValueChanged(object sender, EventArgs e)
+        {
+            _model.SetC(Decimal.ToInt32(numericUpDownC.Value));
+        }
+
+        private void textBoxC_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                _model.SetC(Int32.Parse(textBoxC.Text));
+            }
+        }
+
+        private void textBoxC_Leave(object sender, EventArgs e)
+        {
+            _model.SetC(Int32.Parse(textBoxC.Text));
         }
     }
 }
