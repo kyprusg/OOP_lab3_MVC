@@ -90,6 +90,7 @@
             this.numericUpDownA.Size = new System.Drawing.Size(148, 22);
             this.numericUpDownA.TabIndex = 5;
             this.numericUpDownA.ValueChanged += new System.EventHandler(this.numericUpDownA_ValueChanged);
+            this.numericUpDownA.Leave += new System.EventHandler(this.numericUpDownA_Leave);
             // 
             // numericUpDownB
             // 
@@ -98,6 +99,7 @@
             this.numericUpDownB.Size = new System.Drawing.Size(148, 22);
             this.numericUpDownB.TabIndex = 6;
             this.numericUpDownB.ValueChanged += new System.EventHandler(this.numericUpDownB_ValueChanged);
+            this.numericUpDownB.Leave += new System.EventHandler(this.numericUpDownB_Leave);
             // 
             // numericUpDownC
             // 
@@ -106,6 +108,7 @@
             this.numericUpDownC.Size = new System.Drawing.Size(148, 22);
             this.numericUpDownC.TabIndex = 7;
             this.numericUpDownC.ValueChanged += new System.EventHandler(this.numericUpDownC_ValueChanged);
+            this.numericUpDownC.Leave += new System.EventHandler(this.numericUpDownC_Leave);
             // 
             // trackBarA
             // 

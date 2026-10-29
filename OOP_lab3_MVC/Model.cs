@@ -76,7 +76,7 @@ namespace OOP_lab3_MVC
         private void NotifyAndSave()
         {
             Save();
-            observers?.Invoke(this, null);
+            observers.Invoke(this, null);
         }
         private void Save()
         {
